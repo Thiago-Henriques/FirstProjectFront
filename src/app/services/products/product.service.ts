@@ -39,7 +39,7 @@ export class ProductService {
   }
 
   delete(id: number): Observable<number> {
-    return this.http.delete<number>(this.buildUrl(`${this.productEndpoint}/${id}`)).pipe(
+    return this.http.delete<number>(this.buildUrl(`${this.productEndpoint}?id=${id}`)).pipe(
       catchError(this.handleError)
     );
   }

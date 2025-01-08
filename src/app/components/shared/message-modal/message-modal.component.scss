@@ -1,0 +1,33 @@
+/* Estilo para o sucesso */
+.success {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    width: 400px;  /* Ajuste de largura */
+    height: auto;
+  }
+  
+  /* Estilo para o erro */
+  .error {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    width: 400px;  /* Ajuste de largura */
+    height: auto;
+  }
+  
+  /* Se você precisar ajustar o título ou o conteúdo dentro do modal */
+  mat-dialog-title {
+    font-size: 24px;
+  }
+  
+  mat-dialog-content {
+    font-size: 18px;
+  }
+  
+  mat-dialog-actions {
+    text-align: center;
+  }
+  

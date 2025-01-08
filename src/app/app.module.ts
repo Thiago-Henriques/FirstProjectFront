@@ -7,7 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { provideHttpClient } from '@angular/common/http';
 import { ServicesModule } from './services/services.module';
 import { ComponentsModule } from './components/components.module';
-import { withFetch } from '@angular/common/http';  // Adicione essa importação
+import { withFetch } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,15 +16,16 @@ import { withFetch } from '@angular/common/http';  // Adicione essa importação
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-
+    
     SharedModule,
     ServicesModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withFetch()), 
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

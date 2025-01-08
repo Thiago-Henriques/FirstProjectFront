@@ -1,0 +1,103 @@
+// Variáveis para reutilização de cores
+$primary-color: #4caf50;
+$secondary-color: #f44336;
+
+// Mixin para responsividade
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 600px) { @content; }
+  } 
+  @else if $breakpoint == medium {
+    @media (max-width: 960px) { @content; }
+  } 
+  @else if $breakpoint == large {
+    @media (max-width: 1280px) { @content; }
+  }
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2rem;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .primary-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    &:active {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+  .primary-button {
+    display: inline-block; // Garante que funcione como botão
+    text-align: center;    // Centraliza o texto no link
+    text-decoration: none; // Remove o sublinhado padrão do link
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  
+    &:active {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+  .primary-button {
+    display: inline-block; // Garante que funcione como botão
+    text-align: center;    // Centraliza o texto no link
+    text-decoration: none; // Remove o sublinhado padrão do link
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  
+    &:active {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+    
+
+  @include respond-to(small) {
+    padding: 10px;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
